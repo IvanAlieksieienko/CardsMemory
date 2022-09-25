@@ -1,0 +1,14 @@
+<div class="container">
+    <app-options (giveCardsRequested)="this.giveCards($event)" (memoryFinished)="finish()">
+    </app-options>
+
+    <div class="row justify-content-center">
+        Cards left: {{ this.pack.length }}
+    </div>
+
+    <app-in-game-cards *ngIf="!this.finished" [trashHasCards]="!!this.trash.length" [inGameCards]="this.buffer">
+    </app-in-game-cards>
+
+    <app-judge *ngIf="this.finished" [allCards]="this.allCards" [cardsToGuess]="this.trash">
+    </app-judge>
+</div>

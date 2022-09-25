@@ -1,0 +1,9 @@
+<div class="row justify-content-around">
+    <mat-form-field class="col-6" appearance="fill">
+        <mat-label>Number of cards to give</mat-label>
+        <input type="number" matInput max="6" min="1" #numberOfCards autocomplete="off">
+    </mat-form-field>
+
+    <button class="col-2 options" mat-raised-button (click)="giveCards(+numberOfCards.value)">Give me</button>
+    <button class="col-2 options" mat-raised-button (click)="finish()">Finish</button>
+</div>

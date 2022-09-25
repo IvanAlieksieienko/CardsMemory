@@ -1,0 +1,22 @@
+.card-img {
+    width: 100%;
+}
+
+.card {
+    padding: 10px;
+    border: none;
+    box-shadow: 6px 6px 7px 3px;
+    margin: 10px;
+    transition: all 200ms ease-in-out;
+    cursor: not-allowed;
+    max-width: 138px;
+    max-height: 184px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1);
+}

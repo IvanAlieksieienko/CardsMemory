@@ -1,0 +1,8 @@
+<div class="row justify-content-center">
+    <div class="row" *ngFor="let keyValue of this.groupedByRank | keyvalue: asIsOrder">
+        <div class="col card clickable" *ngFor="let card of this.keyValue.value" [@enterAnimation]
+            [ngClass]="this.getClass(card)" (click)="guessCard(card)">
+            <img [src]="card.src" class="card-img">
+        </div>
+    </div>
+</div>
