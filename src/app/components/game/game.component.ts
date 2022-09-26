@@ -22,7 +22,7 @@ export class GameComponent implements OnInit {
         _dataRetrieverService.getCards().subscribe(cards => {
             this.allCards = cards;
 
-            this.pack = _dataRetrieverService.getMixedCards(this.allCards);
+            this.pack = [..._dataRetrieverService.getMixedCards(this.allCards)];
         });
     }
     
